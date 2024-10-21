@@ -55,7 +55,7 @@ def main():
                       st.write(f"Duration: {duration:.2f} 초")               
                 
                 except Exception as e:
-                      st.session_state.messasges.append({"role": "assistant", "content": str(e)})
+                      st.session_state.messages.append({"role": "assistant", "content": str(e)})
                       logging.error(f"에러 발생: {str(e)}")
 
 if __name__ == "__main__":
