@@ -50,8 +50,8 @@ def main():
                       messages = [ChatMessage(role=msg["role"], content=msg["content"]) for msg in st.session_state.messages]
                       response_message = stream_chat(model, messages)
                       duration = time.time() - start_time
-                      respone_message_with_duration = f"{response_message}\n\nDuration: {duration:.2f} seconds"
-                      st.session_state.messages.append({"role": "assistant", "content": respone_message_with_duration})
+                      response_message_with_duration = f"{response_message}\n\nDuration: {duration:.2f} seconds"
+                      st.session_state.messages.append({"role": "assistant", "content": response_message_with_duration})
                       st.write(f"Duration: {duration:.2f} 초")               
                 
                 except Exception as e:
